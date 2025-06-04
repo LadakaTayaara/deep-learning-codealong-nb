@@ -65,7 +65,8 @@ prototype1.to(device)
 #loss function
 loss_fn=nn.L1Loss()
 #setup optimizer
-optimizer=torch.optim.SGD(params=prototype1.parameters(),lr=0.01,)
+optimizer=torch.optim.SGD(params=prototype1.parameters(),
+                          lr=0.01,)
 
 #training loop 
 torch.manual_seed(69)
@@ -84,7 +85,7 @@ for epoch in range(epochs):
     y_pred=prototype1(trainx)
 
     #calculate loss
-    loss=loss_fn(y_pred,trainy.unsqueeze(1))  # Match shapes with model output
+    loss=loss_fn(y_pred,trainy.unsqueeze(1))  # Match shapes with model output, format:- input and the targetted value
 
     #optimizer zero grad
     optimizer.zero_grad()
