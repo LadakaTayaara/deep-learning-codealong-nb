@@ -119,6 +119,15 @@ with torch.inference_mode():
 plotdagraph(prediction=y_preds.cpu())
 plt.show()
 
+
+
+
+
+
+
+
+
+
 #create model save path 
 model_name="type_01_1_prototype"
 model_save_path=Path("modlstest")
